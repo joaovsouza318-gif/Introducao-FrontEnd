@@ -22,5 +22,45 @@
         </ul>
     </div>
 
+    <form id="form-pessoa" name="form-pessoa" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" class="input-txt01" maxlength="12" placeholder="Informe Seu Nome: " required>
+
+        <label for="cpf">CPF: </label>
+        <input type="number" name="cpf" id="cpf" class="input-txt02" maxlength="14" placeholder="Informe Seu CPF: " 
+        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+
+        <label for="sexo">Sexo: </label>
+        <input type="radio" name="sexo" class="input-radio" value="F"> Feminino
+        <input type="radio" name="sexo" class="input-radio" value="M"> Masculino
+
+        <select name="estado" id="estado" required>
+            <option>Selecione o Estado</option>
+            <option value="SE">Sergipe</option>
+            <option value="BA">Bahia</option>
+            <option value="AL">Alagoas</option>
+            <option value="PE">Pernambuco</option>
+        </select>
+
+        <label for="motivo">Qual o Motivo da Viagem? </label>
+        <input type="checkbox" class="input-check" name="estudo" id="estudo" value="estudo">Estudo
+        <input type="checkbox" class="input-check" name="lazer" id="lazer" value="lazer">Lazer
+        <input type="checkbox" class="input-check" name="trabalho" id="trabalho" value="trabalho">Trabalho
+
+        <label for="comentario">Comentário</label>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+
+        <label for="senha">Senha: </label>
+        <input type="password" id="senha" name="senha" class="input-txt02" placeholder="Informe Sua Senha: " required>
+
+        <label for="dataNascimento">Data de Nascimento: </label>
+        <input type="date" name="dataNascimento" id="dataNascimento" required>
+
+        <label for="quantidade" >Quantidade: </label>
+        <input type="range" name="quantidade" id="quantidade" min="0" max="10">
+
+
+
+    </form>
 </body>
 </html>
