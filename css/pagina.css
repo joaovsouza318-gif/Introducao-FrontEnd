@@ -1,3 +1,6 @@
+/* ==========================================
+   SEU CSS ORIGINAL - NÃO ALTERADO
+   ========================================== */
 *{
     margin:0;
     padding:0;
@@ -269,3 +272,206 @@ img{
     }
 }
 
+/* ==========================================
+   CÓDIGO EXCLUSIVO PARA O CARRINHO (Adições)
+   ========================================== */
+
+/* Container Principal do Layout 80:20 */
+#carrinho-container {
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Seção dos Itens (80% do espaço proporcional) */
+#itens-carrinho {
+    flex: 4; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#itens-carrinho h2, #resumo-carrinho h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #313ddf;
+    padding-bottom: 10px;
+}
+
+/* Novo componente compacto para o item de carrinho horizontal */
+.item-carrinho-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #242424;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Imagem pequena do item no carrinho */
+.img-pequena-carrinho {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Informações alinhadas horizontalmente */
+.info-carrinho-horizontal {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ajustes finos nos textos do item horizontal */
+.info-carrinho-horizontal .title-card {
+    min-height: auto;
+    margin: 0;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+
+.info-carrinho-horizontal .value-card {
+    margin: 0;
+    font-size: 18px;
+    color: #00ff88;
+}
+
+/* Seletor de Quantidade (+ e -) */
+.quantidade-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-qtd {
+    background: #313ddf;
+    border: none;
+    color: white;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-qtd:hover {
+    background: #00bfff;
+}
+
+.input-qtd {
+    width: 45px;
+    text-align: center;
+    background: #2b2b2b;
+    border: 1px solid #444;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Botão Personalizado para Remover do Carrinho */
+.btn-remover {
+    padding: 10px 20px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-remover:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Painel de Resumo Lateral (20% do espaço proporcional) */
+#resumo-carrinho {
+    flex: 1;
+    background: #242424;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.divisor-resumo {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 15px 0;
+}
+
+.resumo-linha.total {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+
+.resumo-linha.total span:last-child {
+    color: #00ff88;
+}
+
+/* Botão de Checkout */
+.btn-pagamento {
+    width: 100%;
+    padding: 14px;
+    background: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+.btn-pagamento:hover {
+    background: #0099cc;
+    transform: scale(1.02);
+}
+
+@media(max-width:900px){
+    #carrinho-container {
+        flex-direction: column;
+    }
+    
+    #itens-carrinho, #resumo-carrinho {
+        width: 100%;
+        flex: none;
+    }
+    
+    .item-carrinho-horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-carrinho-horizontal {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .quantidade-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

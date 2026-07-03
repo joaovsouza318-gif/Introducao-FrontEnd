@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual</title>
+    <title>Loja Virtual - Carrinho</title>
 
     <link rel="stylesheet" href="../css/pagina.css">
     <link rel="shortcut icon" href="../assets/icones/logo.png" type="image/x-icon">
@@ -27,40 +27,92 @@
 
             <div id="div-icones">
                 <ul>
-                    <li><a href="login.html" class="linkIcone"><img src="../assets/icones/login.png"
-                                alt="login button"></a></li>
-                    <li><a href="carrinho.html" class="linkIcone"><img src="../assets/icones/carrinho.png"
-                                alt="cart button"></a></li>
-
+                    <li><a href="login.html" class="linkIcone"><img src="../assets/icones/login.png" alt="login button"></a></li>
+                    <li><a href="carrinho.html" class="linkIcone"><img src="../assets/icones/carrinho.png" alt="cart button"></a></li>
                 </ul>
             </div>
         </header>
 
-        <div id="texto-principal">
-            <section id="cards">
-                <div class="item">
+        <div id="carrinho-container">
             
-                    <img src="../assets/jogos/astroGoty.jpg" alt="jogo1" class="item-img-card">
-            
-                    <div class="info">
-                        <h2 class="title-card">Astro Bot</h2>
-                        <h3 class="value-card">R$ 339,90</h3>
+            <section id="itens-carrinho">
+                <h2>Seu Carrinho</h2>
+                
+                <div class="item-carrinho-horizontal">
+                    <img src="../assets/jogos/spiderMiles.jpg" alt="Spider Man Miles Morales" class="img-pequena-carrinho">
+                    
+                    <div class="info-carrinho-horizontal">
+                        <h2 class="title-card">Spider Man Miles Morales</h2>
+                        <h3 class="value-card">R$ 259,90</h3>
+                        
+                        <div class="quantidade-container">
+                            <button class="btn-qtd">-</button>
+                            <input type="number" value="1" min="1" class="input-qtd">
+                            <button class="btn-qtd">+</button>
+                        </div>
                     </div>
-            
-                    <button class="item-btn-card">Remover</button>
-            
+                    
+                    <button class="btn-remover">Remover</button>
+                </div>
+
+                <div class="item-carrinho-horizontal">
+                    <img src="../assets/jogos/granTurismo.jpg" alt="Gran Turismo 7" class="img-pequena-carrinho">
+                    
+                    <div class="info-carrinho-horizontal">
+                        <h2 class="title-card">Gran Turismo 7</h2>
+                        <h3 class="value-card">R$ 349,90</h3>
+                        
+                        <div class="quantidade-container">
+                            <button class="btn-qtd">-</button>
+                            <input type="number" value="2" min="1" class="input-qtd">
+                            <button class="btn-qtd">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-remover">Remover</button>
+                </div>
+
+                <div class="item-carrinho-horizontal">
+                    <img src="../assets/jogos/monsterHunter.jpg" alt="Monster Hunter World" class="img-pequena-carrinho">
+                    
+                    <div class="info-carrinho-horizontal">
+                        <h2 class="title-card">Monster Hunter World</h2>
+                        <h3 class="value-card">R$ 110,00</h3>
+                        
+                        <div class="quantidade-container">
+                            <button class="btn-qtd">-</button>
+                            <input type="number" value="1" min="1" class="input-qtd">
+                            <button class="btn-qtd">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-remover">Remover</button>
                 </div>
             </section>
 
-                <div class="item">
-                    <img src="../assets/jogos/astroGoty2.jpg" alt="jogo2" class="img-card">
-                    <h2 class="title-card"> Astro Bot </h2>
-                    <h3 class="value-card">R$ 339,90</h3>
-    
-                    <button class="btn-card">Remover</button>
+            <aside id="resumo-carrinho">
+                <h2>Resumo do Pedido</h2>
+                
+                <div class="resumo-linha">
+                    <span>Subtotal (2 itens):</span>
+                    <span>R$ 679,80</span>
                 </div>
+                
+                <div class="resumo-linha">
+                    <span>Frete:</span>
+                    <span>R$ 20,00</span>
+                </div>
+                
+                <hr class="divisor-resumo">
+                
+                <div class="resumo-linha total">
+                    <span>Total:</span>
+                    <span>R$ 699,80</span>
+                </div>
+                
+                <button class="btn-pagamento">Ir para o Pagamento</button>
+            </aside>
 
-                <div>total> </div>
         </div>
 
         <footer id="rodape">
@@ -71,9 +123,8 @@
 
             <div id="icones_sociais">
                 <ul>
-                    <li><a href="instagram.com/el_tabosa"><img src="../assets/icones/instagram.png" alt="instagram"></a>
-                    </li>
-                    <li><a href="X.com/el_tabosa"><img src="../assets/icones/X.jpg" alt="X"></a></li>
+                    <li><a href="https://instagram.com/el_tabosa" target="_blank"><img src="../assets/icones/instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://X.com/el_tabosa" target="_blank"><img src="../assets/icones/X.jpg" alt="X"></a></li>
                 </ul>
             </div>
 
@@ -83,9 +134,7 @@
                 <img src="../assets/icones/master_card.png" alt="MasterCard">
             </div>
         </footer>
-
     </main>
-
 </body>
 
 </html>
