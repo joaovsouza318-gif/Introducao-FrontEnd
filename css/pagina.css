@@ -156,6 +156,32 @@ img{
     transform:scale(1.03);
 }
 
+.item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    background:#242424;
+    padding:20px;
+    border-radius:12px;
+}
+
+.item-img-card{
+    width:150px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.item-btn-card{
+    width:150px;
+}
+
+.info{
+    flex:1;
+}
+
+
 #rodape{
     background:#1d1d1d;
     margin-top:50px;
