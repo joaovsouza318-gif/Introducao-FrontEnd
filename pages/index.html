@@ -1,62 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto WEB - HTML/CSS </title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Loja Virtual</title>
+
+    <link rel="stylesheet" href="../css/pagina.css">
+    <link rel="shortcut icon" href="../assets/icones/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div id="links">
-        <a href="index.html">Página Inicial</a> | <a href="imagens.html">Página Secundária</a>
-    </div>
+    <main id="geral">
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="index.html"> <img src="../assets/icones/logo.png" alt="logo"> </a>
+            </div>
 
-    <div id="div-form">
-        <h1>Formulário Pessoa</h1>
-        <form id="form-pessoa" name="form-pessoa" method="post">
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" class="input-txt01" maxlength="12" placeholder="Informe Seu Nome: " required>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html" class="linkMenu">Home</a></li>
+                    <li><a href="cadastro.html" class="linkMenu">Cadastro</a></li>
+                    <li><a href="sobre.html" class="linkMenu">Sobre</a></li>
+                </ul>
+            </nav>
 
-            <label for="cpf">CPF: </label>
-            <input type="text" name="cpf" id="cpf" class="input-txt02" maxlength="14" placeholder="Informe Seu CPF: " required>
+            <div id="div-icones">
+                <ul>
+                    <li><a href="login.html" class="linkIcone"><img src="../assets/icones/login.png" alt="login button"></a></li>
+                    <li><a href="carrinho.html" class="linkIcone"><img src="../assets/icones/carrinho.png" alt="cart button"></a></li>
 
-            <label for="sexo">Sexo: </label>
-            <input type="radio" name="sexo" class="input-radio" value="F"> Feminino
-            <input type="radio" name="sexo" class="input-radio" value="M"> Masculino
+                </ul>
+            </div>
+        </header>
 
-            <label for="estado">
-                <select name="estado" id="estado" required>
-                    <option>Selecione o Estado</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="BA">Bahia</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="PE">Pernambuco</option>
-                </select>
-            </label>
+        <section id="Pesquisa">
+            <input type="text" name="pesquisa" id="pesquisa" placeholder="Digite seu Produto: ">
+        </section>
 
-            <label for="motivo">Qual o Motivo da Viagem? </label>
-            <input type="checkbox" class="input-check" name="estudo" id="estudo" value="estudo">Estudo
-            <input type="checkbox" class="input-check" name="lazer" id="lazer" value="lazer">Lazer
-            <input type="checkbox" class="input-check" name="trabalho" id="trabalho" value="trabalho">Trabalho
+        <section id="cards">
 
-            <label for="comentario">Comentário</label>
-            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+            <div class="card">
+                <img src="../assets/jogos/astroGoty.jpg" alt="jogo1" class="img-card">
+                <h2 class="title-card"> Astro Bot </h2>
+                <h3 class="value-card">R$ 339,90</h3>
 
-            <label for="senha">Senha: </label>
-            <input type="password" id="senha" name="senha" class="input-txt02" placeholder="Informe Sua Senha: " required>
+                <button class="btn-card">Adicionar ao Carrinho</button>
+            </div>
 
-            <label for="dataNascimento">Data de Nascimento: </label>
-            <input type="date" name="dataNascimento" id="dataNascimento" required>
+            <div class="card">
+                <img src="../assets/jogos/baldursGate.jpg" alt="jogo2" class="img-card">
+                <h2 class="title-card"> Baldurs Gate III </h2>
+                <h3 class="value-card">R$ 359,90</h3>
 
-            <label for="quantidade" >Quantidade: </label>
-            <input type="range" name="quantidade" id="quantidade" min="0" max="10">
+                <button class="btn-card">Adicionar ao Carrinho</button>
+            </div>
 
-            <label for="buttons">
-                <input type="button" value="Enviar" id="submit">
-                <input type="button" value="Limpar" id="reset">
-            </label>
+            <div class="card">
+                <img src="../assets/jogos/boruto.jpg" alt="jogo3" class="img-card">
+                <h2 class="title-card"> Naruto Ultimate Ninja Storm IV </h2>
+                <h3 class="value-card">R$ 239,90</h3>
 
-        </form>
-    </div>
+                <button class="btn-card">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card">
+                <img src="../assets/jogos/codWf.jpg" alt="jogo4" class="img-card">
+                <h2 class="title-card"> Call of Duty Modern Warfare </h2>
+                <h3 class="value-card">R$ 319,90</h3>
+
+                <button class="btn-card">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card">
+                <img src="../assets/jogos/eldenRing.jpg" alt="jogo5" class="img-card">
+                <h2 class="title-card"> Elden Ring </h2>
+                <h3 class="value-card">R$ 249,90</h3>
+
+                <button class="btn-card">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+        <footer id="rodape">
+            <div id="dadosloja">
+                <h2>Rua TheGoatGames, 6777 - Bairro Europa</h2>
+                <h1>Aracaju - Sergipe</h1>
+            </div>
+
+            <div id="icones_sociais">
+                <ul>
+                    <li><a href="https://www.instagram.com/el_tabosa/"><img src="../assets/icones/instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://x.com/el_tabosa"><img src="../assets/icones/X.jpg" alt="x"></a></li>
+                </ul>
+            </div>
+
+            <div id="div-cartoes">
+                <img src="../assets/icones/hipercard.png" alt="HiperCard">
+                <img src="../assets/icones/visa.png" alt="Visa">
+                <img src="../assets/icones/master_card.png" alt="MasterCard">
+            </div>
+        </footer>
+
+    </main>
+
 </body>
 </html>

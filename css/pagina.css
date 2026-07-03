@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#141414;
+    color:white;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+}
+
+#geral{
+    width:100%;
+    min-height:100vh;
+}
+
+#cabecalho{
+    width:100%;
+    height:90px;
+    background:#313ddf;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    box-shadow:0 3px 15px rgba(0,0,0,.4);
+}
+
+#logo img{
+    height:70px;
+}
+
+#menu ul{
+    display:flex;
+    gap:40px;
+}
+
+.linkMenu{
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.linkMenu:hover{
+    color:#00bfff;
+}
+
+#div-icones ul{
+    display:flex;
+    gap:20px;
+}
+
+#div-icones img{
+    width:35px;
+    transition:.3s;
+}
+
+#div-icones img:hover{
+    transform:scale(1.15);
+}
+
+#Pesquisa{
+    display:flex;
+    justify-content:center;
+    margin:35px 0;
+}
+
+#pesquisa{
+    width:900px;
+    max-width:100%;
+    padding:15px 20px;
+    border:none;
+    border-radius:30px;
+    font-size:17px;
+    outline:none;
+    background:#2b2b2b;
+    color:white;
+    transition:.3s;
+}
+
+#pesquisa:focus{
+    box-shadow:0 0 15px #00bfff;
+}
+
+#cards{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+    padding-bottom:50px;
+}
+
+.card{
+    background:#242424;
+    border-radius:15px;
+    overflow:hidden;
+    padding:20px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 30px rgba(0,191,255,.35);
+}
+
+.img-card{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.title-card{
+    margin:20px 0 10px;
+    font-size:22px;
+    min-height:60px;
+}
+
+.value-card{
+    color:#00ff88;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.btn-card{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#00bfff;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-card:hover{
+    background:#0099cc;
+    transform:scale(1.03);
+}
+
+#rodape{
+    background:#1d1d1d;
+    margin-top:50px;
+    padding:30px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+#dadosloja h2{
+    font-size:17px;
+    margin-bottom:8px;
+    color:#ccc;
+}
+
+#dadosloja h1{
+    font-size:24px;
+    color:#00bfff;
+}
+
+#icones_sociais ul{
+    display:flex;
+    gap:20px;
+}
+
+#icones_sociais img{
+    width:40px;
+    transition:.3s;
+}
+
+#icones_sociais img:hover{
+    transform:scale(1.2);
+}
+
+#div-cartoes{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+#div-cartoes img{
+    height:35px;
+}
+
+#texto-principal{
+    background-color: #1d1d1d;
+    width:50%;
+    margin:auto;
+    margin-bottom:20px auto ;
+    text-align:justify;
+    margin-bottom:50px;
+    border-radius: 5%;
+}
+
+#texto-principal h1{
+    font-size:40px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#texto-principal p{
+    font-size:18px;
+    color:#ccc;
+    padding: 35px;
+}
+
+
+@media(max-width:900px){
+    #cabecalho{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:20px;
+    }
+
+    #menu ul{
+        gap:20px;
+    }
+
+    #rodape{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
