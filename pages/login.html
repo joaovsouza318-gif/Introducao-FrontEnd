@@ -1,95 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual</title>
-
+    <title>Login - Minha Loja</title>
     <link rel="stylesheet" href="../css/pagina.css">
-    <link rel="shortcut icon" href="../assets/icones/logo.png" type="image/x-icon">
-</head>
+    
+    <style>
+        #login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 90px - 150px); /* Desconta o cabeçalho e rodapé aproximados */
+            padding: 40px 20px;
+        }
 
+        .login-card {
+            background: #242424; /* Mesmo fundo dos seus cards */
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,.4);
+        }
+
+        .login-card h2 {
+            font-size: 28px;
+            color: #00bfff; /* Tom de azul do seu CSS */
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .form-grupo {
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-grupo label {
+            font-size: 15px;
+            color: #ccc;
+            font-weight: 600;
+        }
+
+        /* Reaproveitando o estilo que você usou na barra de pesquisa */
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            background: #2b2b2b;
+            color: white;
+            transition: .3s;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 15px #00bfff;
+        }
+
+        .login-opcoes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .login-opcoes a:hover {
+            color: #00bfff;
+            text-decoration: underline;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        /* Rodapé interno do card para criar conta */
+        .login-footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 15px;
+            color: #ccc;
+        }
+
+        .login-footer a {
+            color: #00bfff;
+            font-weight: bold;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-    <main id="geral">
+
+    <div id="geral">
+        
         <header id="cabecalho">
             <div id="logo">
-                <a href="index.html"> <img src="../assets/icones/logo.png" alt="logo"> </a>
+                <a href="index.html">
+                    <img src="../assets/icones/logo.png" alt="Logo da Loja">
+                </a>
             </div>
-
             <nav id="menu">
                 <ul>
                     <li><a href="index.html" class="linkMenu">Home</a></li>
-                    <li><a href="cadastro.html" class="linkMenu">Cadastro</a></li>
-                    <li><a href="sobre.html" class="linkMenu">Sobre</a></li>
+                    <li><a href="produtos.html" class="linkMenu">Produtos</a></li>
+                    <li><a href="carrinho.html" class="linkMenu">Carrinho</a></li>
                 </ul>
             </nav>
-
             <div id="div-icones">
                 <ul>
-                    <li><a href="login.html" class="linkIcone"><img src="../assets/icones/login.png"
-                                alt="login button"></a></li>
-                    <li><a href="carrinho.html" class="linkIcone"><img src="../assets/icones/carrinho.png"
-                                alt="cart button"></a></li>
-
+                    <li><a href="login.html"><img src="../assets/icones/login.png" alt="Perfil"></a></li>
                 </ul>
             </div>
         </header>
 
-        <div id="texto-principal">
-            <h1>SOBRE NÓS</h1>
-            <p>
-                A SlayPlantationStore é uma loja virtual especializada em jogos digitais e produtos voltados ao
-                universo gamer, criada para oferecer uma experiência moderna, rápida e intuitiva. Seu catálogo reúne
-                títulos de diversos gêneros, desde aventuras épicas e RPGs até jogos de estratégia, ação, terror e
-                simuladores, atendendo tanto jogadores casuais quanto os mais dedicados.
-                <br><br>
-                Além da variedade de jogos, a plataforma se destaca por sua interface organizada e sistema de navegação
-                simplificado, permitindo que os clientes encontrem facilmente novos lançamentos, promoções e
-                recomendações personalizadas. Cada produto conta com descrições detalhadas, imagens ilustrativas e
-                informações relevantes para auxiliar na decisão de compra.
-                <br><br>
-                A SlayPlantationStore também busca proporcionar uma experiência de compra segura e confiável. Com
-                diferentes opções de pagamento, confirmação rápida dos pedidos e entrega automática de chaves digitais
-                para os títulos adquiridos, a loja prioriza a praticidade e a satisfação dos seus clientes em todas as
-                etapas da compra.
-                <br><br>
-                Outro diferencial da plataforma é a valorização da comunidade gamer. A loja promove eventos sazonais,
-                campanhas promocionais e programas de fidelidade fictícios que recompensam usuários frequentes com
-                descontos exclusivos e benefícios especiais. Dessa forma, incentiva a interação entre os jogadores e
-                fortalece o vínculo com sua base de clientes.
-                <br><br>
-                Pensada para evoluir constantemente, a SlayPlantationStore investe continuamente em melhorias de
-                desempenho, novos recursos e expansão de seu catálogo. Seu objetivo é tornar-se uma referência no
-                comércio digital de jogos, oferecendo qualidade, segurança e uma experiência completa para todos aqueles
-                que desejam explorar novos mundos virtuais.
-                <br><br>
-            </p>
-        </div>
+        <main id="login-container">
+            <div class="login-card">
+                <h2>Acessar Conta</h2>
+                
+                <form action="#" method="POST">
+                    <div class="form-grupo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" class="form-control" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="login-opcoes">
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Lembrar-me
+                        </label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn-card">Entrar</button>
+                </form>
+
+                <div class="login-footer">
+                    Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+                </div>
+            </div>
+        </main>
 
         <footer id="rodape">
             <div id="dadosloja">
-                <h2>Rua TheGoatGames, 6777 - Bairro Europa</h2>
-                <h1>Aracaju - Sergipe</h1>
+                <h2>© 2026 Minha Loja Virtual</h2>
+                <h1>Sua Loja Geek / Tech</h1>
             </div>
-
-            <div id="icones_sociais">
-                <ul>
-                    <li><a href="instagram.com/el_tabosa"><img src="../assets/icones/instagram.png" alt="instagram"></a>
-                    </li>
-                    <li><a href="X.com/el_tabosa"><img src="../assets/icones/X.jpg" alt="X"></a></li>
-                </ul>
-            </div>
-
+            
             <div id="div-cartoes">
-                <img src="../assets/icones/hipercard.png" alt="HiperCard">
-                <img src="../assets/icones/visa.png" alt="Visa">
-                <img src="../assets/icones/master_card.png" alt="MasterCard">
+                <span style="color: #ccc; font-size: 14px;">Ambiente 100% Seguro</span>
             </div>
         </footer>
 
-    </main>
+    </div>
 
 </body>
-
 </html>
