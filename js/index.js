@@ -53,6 +53,8 @@ function adicionarAoCarrinho(novoProduto) {
 
     const itemExistente = carrinho.find(item => item.titulo === novoProduto.titulo);
 
+    console.log(itemExistente)
+
     if (itemExistente) {
         itemExistente.quantidade += 1;
     } else {
@@ -62,3 +64,4 @@ function adicionarAoCarrinho(novoProduto) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     alert(`${novoProduto.titulo} foi adicionado ao seu carrinho!`);
 }
+
