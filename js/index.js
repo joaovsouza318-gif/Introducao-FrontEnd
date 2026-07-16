@@ -13,7 +13,7 @@ async function carregarERenderizarJogos() {
     // 2. Busca os jogos padrão do arquivo jogos.json
     let jogosPadrao = [];
     try {
-        const response = await fetch('../data/jogos.json'); // caminho para onde você salvou o JSON
+        const response = await fetch('data/jogos.json'); // caminho para onde você salvou o JSON
         jogosPadrao = await response.json();
     } catch (error) {
         console.error("Erro ao carregar jogos padrão:", error);
