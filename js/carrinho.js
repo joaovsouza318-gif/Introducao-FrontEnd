@@ -136,5 +136,5 @@ window.finalizarCompra = function() {
     
     alert('Pedido processado com sucesso! Obrigado por comprar na The Goat Games.');
     localStorage.removeItem('carrinho'); // Limpa o carrinho
-    window.location.href = 'index.html'; // Retorna para a Home
+    window.location.href = '../index.html'; // Retorna para a Home
 };

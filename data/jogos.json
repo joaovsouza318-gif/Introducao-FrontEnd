@@ -1,0 +1,77 @@
+[
+    {
+        "titulo": "Astro Bot (GOTY Edition)",
+        "preco": 299.90,
+        "imagemSrc": "../assets/jogos/astroGoty.jpg"
+    },
+    {
+        "titulo": "Baldur's Gate 3",
+        "preco": 199.90,
+        "imagemSrc": "../assets/jogos/baldursGate.jpg"
+    },
+    {
+        "titulo": "Naruto to Boruto: Shinobi Striker",
+        "preco": 79.90,
+        "imagemSrc": "../assets/jogos/boruto.jpg"
+    },
+    {
+        "titulo": "Call of Duty: Modern Warfare",
+        "preco": 274.00,
+        "imagemSrc": "../assets/jogos/codWf.jpg"
+    },
+    {
+        "titulo": "Elden Ring",
+        "preco": 229.90,
+        "imagemSrc": "../assets/jogos/eldenRing.jpg"
+    },
+    {
+        "titulo": "Gran Turismo 7",
+        "preco": 349.90,
+        "imagemSrc": "../assets/jogos/granTurismo.jpg"
+    },
+    {
+        "titulo": "Hogwarts Legacy",
+        "preco": 249.90,
+        "imagemSrc": "../assets/jogos/hogwartsLegacy.jpg"
+    },
+    {
+        "titulo": "The Last of Us Part II",
+        "preco": 199.90,
+        "imagemSrc": "../assets/jogos/lastofUsII.jpg"
+    },
+    {
+        "titulo": "Monster Hunter Wilds",
+        "preco": 299.90,
+        "imagemSrc": "../assets/jogos/monsterHunter.jpg"
+    },
+    {
+        "titulo": "eFootball PES",
+        "preco": 49.90,
+        "imagemSrc": "../assets/jogos/pes.jpg"
+    },
+    {
+        "titulo": "Marvel's Spider-Man: Miles Morales",
+        "preco": 249.90,
+        "imagemSrc": "../assets/jogos/spiderMiles.jpg"
+    },
+    {
+        "titulo": "The Crew Motorfest",
+        "preco": 179.90,
+        "imagemSrc": "../assets/jogos/theCrew.jpg"
+    },
+    {
+        "titulo": "The Sims 4",
+        "preco": 0.00,
+        "imagemSrc": "../assets/jogos/theSims.jpg"
+    },
+    {
+        "titulo": "Marvel's Wolverine",
+        "preco": 349.90,
+        "imagemSrc": "../assets/jogos/wolverine.jpg"
+    },
+    {
+        "titulo": "Dragon Ball Xenoverse 2",
+        "preco": 119.90,
+        "imagemSrc": "../assets/jogos/xenoverse2.jpg"
+    }
+]

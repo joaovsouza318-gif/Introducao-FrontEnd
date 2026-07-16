@@ -1,17 +1,29 @@
 // index.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    renderizarJogosCadastrados();
+    carregarERenderizarJogos();
     configurarBotoesAdicionar();
 });
 
-// Renderiza na tela os jogos que foram cadastrados pelo formulário
-function renderizarJogosCadastrados() {
+async function carregarERenderizarJogos() {
     const containerCards = document.getElementById('cards');
+    
+    // 1. Busca os jogos do localStorage (cadastrados pelo form)
     const jogosCadastrados = JSON.parse(localStorage.getItem('jogosCadastrados')) || [];
+    
+    // 2. Busca os jogos padrão do arquivo jogos.json
+    let jogosPadrao = [];
+    try {
+        const response = await fetch('../data/jogos.json'); // caminho para onde você salvou o JSON
+        jogosPadrao = await response.json();
+    } catch (error) {
+        console.error("Erro ao carregar jogos padrão:", error);
+    }
 
-    // Para cada jogo cadastrado no localStorage, cria um novo Card no index.html
-    jogosCadastrados.forEach(jogo => {
+    // 3. Junta as duas listas (exibindo os cadastrados primeiro)
+    const todosOsJogos = [...jogosCadastrados, ...jogosPadrao];
+
+    // 4. Renderiza na tela
+    todosOsJogos.forEach(jogo => {
         const cardHTML = `
             <div class="card">
                 <img src="${jogo.imagemSrc}" alt="${jogo.titulo}" class="img-card">

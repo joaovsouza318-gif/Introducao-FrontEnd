@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
 
         // Redireciona de volta para a Home para ver o produto cadastrado
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     });
 });
