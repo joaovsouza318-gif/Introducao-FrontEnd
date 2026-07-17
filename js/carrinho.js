@@ -19,9 +19,13 @@ function renderizarCarrinho() {
     }
 
     carrinho.forEach((produto, index) => {
+        // AJUSTE AQUI: Como o carrinho.html está dentro de /pages, 
+        // precisamos remover o './' do início e colocar '../' para voltar uma pasta.
+        const caminhoImagemCorrigido = `../${produto.imagemSrc.replace('./', '')}`;
+
         const itemHTML = `
             <div class="item-carrinho-horizontal" data-index="${index}">
-                <img src="${produto.imagemSrc}" alt="${produto.titulo}" class="img-pequena-carrinho">
+                <img src="${caminhoImagemCorrigido}" alt="${produto.titulo}" class="img-pequena-carrinho">
                 
                 <div class="info-carrinho-horizontal">
                     <h2 class="title-card">${produto.titulo}</h2>
@@ -50,7 +54,6 @@ window.alterarQuantidade = function(index, alteracao) {
     if (carrinho[index]) {
         carrinho[index].quantidade += alteracao;
 
-        // Se a quantidade for menor que 1, remove o item ou mantém em 1 (aqui optamos por manter em 1)
         if (carrinho[index].quantidade < 1) {
             carrinho[index].quantidade = 1;
         }
@@ -64,7 +67,7 @@ window.alterarQuantidade = function(index, alteracao) {
 window.removerItem = function(index) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     
-    carrinho.splice(index, 1); // Remove o elemento do array pelo índice
+    carrinho.splice(index, 1);
     
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     renderizarCarrinho();
@@ -80,7 +83,6 @@ function calcularTotais(carrinho) {
         subtotal += produto.preco * produto.quantidade;
     });
 
-    // Definindo uma regra simples de frete de R$ 15,00 caso tenha itens, e grátis acima de R$ 300,00
     let frete = 0;
     if (subtotal > 0 && subtotal < 300) {
         frete = 15.00;
@@ -135,6 +137,6 @@ window.finalizarCompra = function() {
     }
     
     alert('Pedido processado com sucesso! Obrigado por comprar na The Goat Games.');
-    localStorage.removeItem('carrinho'); // Limpa o carrinho
+    localStorage.removeItem('carrinho');
     window.location.href = '../index.html'; // Retorna para a Home
 };
